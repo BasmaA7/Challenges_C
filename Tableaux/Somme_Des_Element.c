@@ -14,6 +14,4 @@ for (int i=0;i<n;i++){
 printf("la somme totale de votre tableau et :");
     printf("%d",sum);
 
-
-
 }
