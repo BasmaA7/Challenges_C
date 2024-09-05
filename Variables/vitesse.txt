@@ -1,0 +1,10 @@
+#include <stdio.h>
+ int main(){
+     float v;
+     printf("Entrer la vitesse en (km/h) :");
+     scanf("%f",&v);
+     float b;
+     b=v * 0.27778;
+     printf("Voici la vitesse en (m/s) :%f",b);
+     return 0;
+ }

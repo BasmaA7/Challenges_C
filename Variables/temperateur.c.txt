@@ -1,0 +1,13 @@
+#include  <stdio.h>
+int main(){
+     int temp;
+     
+     printf("Entrer  la temp en c : ");
+     scanf("%d",&temp);
+     int k ;
+     k=temp+ 273.15;
+     printf("La temp et  %d Kelvin",k);
+return 0;
+     
+}
+
