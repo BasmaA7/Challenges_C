@@ -1,0 +1,14 @@
+#include <stdio.h>
+ int main(){
+     int a,b,c,n;
+     printf("enter Le 1 nombre :");
+     scanf("%d",&a);
+     printf("enter Le 2eme nombre :");
+     scanf("%d",&b);
+     printf("enter Le 3eme nombre :");
+     scanf("%d",&c);
+     n=(a*2+b*3+c*5)/(2+3+5);
+     printf("Moyenne pondérée des 3 nombres : %d",n );
+
+
+ }

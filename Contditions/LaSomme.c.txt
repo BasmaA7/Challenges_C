@@ -1,0 +1,16 @@
+#include <stdio.h>
+ int main(){
+     int a,b;
+     printf("Enter le 1er num : ");
+     scanf("%d",&a);
+     printf("Enter le 2eme num : ");
+     scanf("%d",&b);
+     
+     if(a==b){
+         printf("les 2 nombres sont identiques so %d",(a+b)*3);
+     }
+     else{
+         printf("la somme de a et b %d",a+b);
+     }
+
+ }

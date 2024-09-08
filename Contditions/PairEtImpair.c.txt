@@ -1,0 +1,14 @@
+
+#include <stdio.h>
+ int main(){
+int n;
+printf("entrer le nombre :");
+scanf("%d",&n);
+if(n % 2 == 0){
+    printf("Le nombre et pair");
+    
+}else{
+    printf("le nombre et impaire");
+}
+    return 0;
+ } 

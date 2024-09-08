@@ -1,0 +1,23 @@
+#include <stdio.h>
+ int main(){
+char n;
+printf("Entrer le caractère :");
+scanf(" %c",&n);
+switch(n){
+    case 'a': case 'A':
+  
+    case 'o': case 'O':
+    case 'e': case 'E':
+    
+    case 'i': case 'I':
+   
+    case 'u': case 'U':
+   
+    case 'y': case 'Y':
+    printf("le %c et un voyelle");
+    break;
+    default:
+    printf("ce caractere n'est pas un voyelle ");
+    break;
+}
+ }

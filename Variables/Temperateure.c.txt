@@ -1,0 +1,18 @@
+#include <stdio.h> 
+  int main (){
+      float Temperature;
+      printf("Enter la temperateure en C ");
+      scanf("%f",&Temperature);
+     if (Temperature < 0 ){
+         printf("Solide");
+     }
+     else if(Temperature >= 0 &&  Temperature < 100){
+         printf("Liquid");
+         
+     }
+     else{
+         printf("Gaz");
+     }
+     return 0;
+  }
+

@@ -1,0 +1,11 @@
+ #include <stdio.h>
+ int main(){
+     int a,b;
+     printf("enter la valeur de a :");
+     scanf("%d",&a);
+     printf("enter la valeur de b :");
+     scanf("%d",&b);
+     printf("Voici la somme de a et b : a+b =%d \n",a+b);
+     printf("Voici Multiple de a et b : a*b =%d \n",a*b);
+     printf("Voici la somme de a et b : a/b =%d \n",a/b);
+ }
