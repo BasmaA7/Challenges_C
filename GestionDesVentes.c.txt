@@ -1,0 +1,84 @@
+#include <stdio.h>
+ 
+ float TotalVentes(int n){
+     float price;
+     float  sum=0;
+     for(int i=0;i<n;i++){
+         printf("entrer le prix de  produit :");
+         scanf("%f",&price);
+         sum +=price;
+     
+
+     }
+         printf("le total des ventes : %2.f $",sum);
+
+     return sum;
+
+ }
+ 
+ void afficherVentessuperieure(int x){
+     printf("Entrer la moyenne par votre choix :");
+     scanf("%d",&x);
+     
+ }
+ 
+int main(){
+    int n; 
+    int x;
+    int vente[n];
+    printf("Enter le nombre des produits vendus dans la journée :");
+    scanf("%d",&n);
+    
+    int choix;
+    while(1){
+        printf("***********************************************");
+        printf("\nEnter 1 pour calculer le total des ventes \n");
+        printf("\nEnter 2 pour afficher tous les ventes superieure a une moyenne x par votre choix \n");
+        printf("\nEnter 3 pour compter le nombre de ventes a un seuil donnée par votre choix \n");
+        printf("\nEnter 4 pour compter le nombre de ventes inferieure a un seuil donnée \n");
+        printf("\nEntrer 0 si vous voulez quiter \n");
+        printf("Entrer votre choix :");
+        scanf("%d", &choix);
+         switch (choix){
+        case 1:
+        TotalVentes(n);
+    
+        break;
+        case 2:
+        afficherVentessuperieure(x);
+        case 3:
+
+        case 4:
+        
+        case 0:
+       
+            default:
+              printf(" Veuillez réessayer.\n");
+       
+    }
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

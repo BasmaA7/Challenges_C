@@ -56,7 +56,7 @@ int main() {
         printf("6. Quitter\n");
         printf("Choisissez une option : ");
         scanf("%d", &choix);
-        getchar();  // Pour consommer le '\n' restant après scanf
+        getchar();  
 
         switch (choix) {
             case 1:
