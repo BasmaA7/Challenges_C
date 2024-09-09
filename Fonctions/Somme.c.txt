@@ -1,0 +1,17 @@
+#include <stdio.h>
+int Somme(int n, int m){
+    return n+m;
+    
+    
+}
+int main() {
+    int n,m;
+     printf("Enter n :");
+    scanf("%d",&n);
+    printf("Enter m:");
+    scanf("%d",&m);
+    int res=Somme( n,  m);
+    printf("La somme est :%d",res);
+return 0;
+   
+}
