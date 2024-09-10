@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char Nom [100];
+    printf("Entrer la chaine de caractere :");
+     scanf("%s",Nom);
+     printf("%s",Nom);
+}
+
