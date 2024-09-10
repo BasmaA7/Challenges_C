@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+   char name [100];
+   char temp[100];
+   int length=strlen(name)-1;
+    printf("Entrez votre la premiere chaîne : ");
+    fgets(name, sizeof(name), stdin);
+    
+
+for(int i=0 ; i<name[length];i++){
+    name[i]=temp[length];
+}
+   printf("%s",temp);
+    return 0;
+}

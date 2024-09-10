@@ -1,3 +1,46 @@
+// Mini-Projet : Système de Gestion de Contacts
+// Objectif
+// Créer un programme en C pour gérer un carnet de contacts. Le programme doit permettre à l'utilisateur d'ajouter, de rechercher, de modifier, de supprimer et d'afficher des contacts. Chaque contact doit contenir un nom, un numéro de téléphone et une adresse e-mail.
+
+// Détails du Projet
+// 1. Ajouter un Contact
+// Le programme demande les informations suivantes pour chaque contact :
+
+// Nom (chaîne de caractères)
+// Numéro de téléphone (chaîne de caractères)
+// Adresse e-mail (chaîne de caractères)
+// Ces informations sont stockées dans une structure Contact.
+
+// 2. Modifier un Contact
+// Le programme permet à l'utilisateur de modifier les informations d'un contact existant. L'utilisateur peut modifier le numéro de téléphone et l'adresse e-mail en fonction du nom du contact.
+
+// 3. Supprimer un Contact
+// Le programme permet à l'utilisateur de supprimer un contact de la liste en recherchant par nom. Une fois supprimé, le contact n'apparaît plus dans le carnet de contacts.
+
+// 4. Afficher Tous les Contacts
+// Le programme affiche la liste complète des contacts avec leurs détails.
+
+// 5. Rechercher un Contact
+// Le programme permet à l'utilisateur de rechercher un contact par son nom. Si le contact est trouvé, ses détails (nom, numéro de téléphone, adresse e-mail) sont affichés.
+
+// Fonctionnalités Requises
+// Variables : Pour stocker les informations des contacts.
+// Conditions : Pour rechercher, modifier et supprimer des contacts.
+// Boucles : Pour parcourir et afficher la liste des contacts.
+// Tableaux : Pour stocker plusieurs contacts.
+// Chaînes de caractères : Pour manipuler les noms, numéros de téléphone et adresses e-mail.
+// Structures : Pour regrouper les informations liées à un contact.
+
+
+
+
+
+
+
+
+
+
+
 #include <stdio.h>
 #include <string.h>
 
@@ -5,7 +48,7 @@ struct Contact {
     char nom [20];
     char telephone [10];
     char email [40];
-}
+};
 
 struct Contact contacts[100];
 int nombreContacts = 0;
@@ -17,14 +60,14 @@ void ajouter_contact(){
     struct Contact nouveauContact;
 
      printf("Entrez le nom : ");
-     gets(nouveauContact.nom);
+     fgets(nouveauContact.nom,sizeof(nouveauContact.nom),stdin);
 
 printf("Entrez le numéro de téléphone : ");
-    fgets(nouveauContact.telephone);
+    fgets(nouveauContact.telephone,sizeof(nouveauContact.telephone),stdin);
 
 printf("Entrez l'adresse e-mail : ");
-    fgets(nouveauContact.email);
-    puts(nouveauContact.email, "\n");
+    fgets(nouveauContact.email,sizeof(nouveauContact.email),stdin);
+    puts(nouveauContact.email);
 
     contacts[nombreContacts++] = nouveauContact;
     printf("Contact ajouté avec succès.\n");
@@ -41,8 +84,30 @@ void afficher_contacts() {
         printf("Email: %s\n", contacts[i].email);
     }
 
+};
+void rechercher_contact (){
+    char nomRechercher[30];
+    int found=0;
+    struct Contact nouveauContact;
+      printf("Entrez le nom que vous voulez le chercher : ");
+     fgets(nomRechercher,sizeof(nomRechercher),stdin);
+     for(int i=0 ;i<nombreContacts;i++){
+        if (strcmp(contacts[i].nom, nomRechercher) == 0) {
+            printf("Contact trouvé:\n");
+            printf("Nom: %s\n", contacts[i].nom);
+            printf("Téléphone: %s\n", contacts[i].telephone);
+            printf("Email: %s\n", contacts[i].email);
+            found = 1;
+            break;
+        }
+         }
+     }
 
-
+   
+};
+void modifier_contact(){
+    
+}
 
 int main() {
     int choix;
@@ -56,7 +121,7 @@ int main() {
         printf("6. Quitter\n");
         printf("Choisissez une option : ");
         scanf("%d", &choix);
-        getchar();  
+        
 
         switch (choix) {
             case 1:
@@ -69,13 +134,14 @@ int main() {
                 rechercher_contact();
                 break;
             case 4:
-                modifier_contact();
+                // modifier_contact();
                 break;
             case 5:
-                supprimer_contact();
+                // supprimer_contact();
                 break;
-            case 6:
-                exit(0);
+            case 0:
+            printf("Redemarer le programe");
+            break;
             default:
                 printf("Choix invalide. Veuillez réessayer.\n");
         }
@@ -83,7 +149,23 @@ int main() {
         
     }
     return 0;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
