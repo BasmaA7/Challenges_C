@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+   char name1 [100];
+   char name2[100];
+
+    printf("Entrez votre la premiere chaîne : ");
+    fgets(name1, sizeof(name1), stdin);
+    
+    printf("Entrez votre la premiere chaîne : ");
+    fgets(name2, sizeof(name2), stdin);
+    int res= strcmp(name1,name2);
+    if(res==0){
+    printf("the names is the same")  ;
+    
+}else{
+    printf("Les 2 names sont different");
+}
+    return 0;
+}
+
+
+

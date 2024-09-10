@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char chaine[100];
+    char chaine2[100];
+  
+
+    
+    printf("Entrez votre la premiere chaîne : ");
+    fgets(chaine, sizeof(chaine), stdin);
+    printf("Entrez votre la 2eme chaîne : ");
+    fgets(chaine2, sizeof(chaine2), stdin);
+    strcat(chaine,chaine2);
+    puts(chaine);
+
+
+    
+   
+    return 0;
+}
